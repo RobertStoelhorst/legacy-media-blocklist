@@ -85,7 +85,8 @@
 0.0.0.0 dw.com
 0.0.0.0 dw.com/en
 0.0.0.0 economist.com
-0.0.0.0 edition.cnn.com0.0.0.0 egyptindependent.com
+0.0.0.0 edition.cnn.com
+0.0.0.0 egyptindependent.com
 0.0.0.0 eldiario.es
 0.0.0.0 elpais.com
 0.0.0.0 elpasotimes.com

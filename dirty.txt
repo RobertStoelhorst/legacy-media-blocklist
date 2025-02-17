@@ -265,6 +265,7 @@
 0.0.0.0 middleeasteye.net
 0.0.0.0 timesofisrael.com
 0.0.0.0 haaretz.com
+0.0.0.0 egyptindependent.com
 0.0.0.0 theafricareport.com
 0.0.0.0 dailymaverick.co.za
 0.0.0.0 news24.com
