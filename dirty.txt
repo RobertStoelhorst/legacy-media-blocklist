@@ -619,3 +619,4 @@
 0.0.0.0 globaltimes.cn
 0.0.0.0 scmp.com
 0.0.0.0 japantimes.co.jp
+0.0.0.0 edition.cnn.com

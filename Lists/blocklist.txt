@@ -85,7 +85,7 @@
 0.0.0.0 dw.com
 0.0.0.0 dw.com/en
 0.0.0.0 economist.com
-0.0.0.0 egyptindependent.com
+0.0.0.0 edition.cnn.com0.0.0.0 egyptindependent.com
 0.0.0.0 eldiario.es
 0.0.0.0 elpais.com
 0.0.0.0 elpasotimes.com
@@ -129,7 +129,7 @@
 0.0.0.0 itv.com/news
 0.0.0.0 iz.ru
 0.0.0.0 jacksonville.com
-0.0.0.0 japantimes.co.jp0.0.0.0 japantimes.co.jp
+0.0.0.0 japantimes.co.jp
 0.0.0.0 jn.pt
 0.0.0.0 journaldemontreal.com
 0.0.0.0 jsonline.com
