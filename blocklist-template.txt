@@ -7,8 +7,7 @@
 # Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/all.txt
 # Project home page: https://github.com/RobertStoelhorst/legacy-media-blocklist
 # ===============================================================
-
-0.0.0.0 7news.com.au
-0.0.0.0 abc.com
-0.0.0.0 abc.net.au
-0.0.0.0 nine.com.au
+# # WARNING !!!! DO NOT MODIFY THIS FILE DIRECTLY.
+# PLEASE ONLY EDIT dirty.txt THEN RUN THE remove_duplicates.py SCRIPT
+# This file will be re-written and sorted by the script.
+# ===============================================================
