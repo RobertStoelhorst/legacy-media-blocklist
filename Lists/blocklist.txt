@@ -7,9 +7,8 @@
 # Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/all.txt
 # Project home page: https://github.com/RobertStoelhorst/legacy-media-blocklist
 # ===============================================================
-# # WARNING !!!! DO NOT MODIFY THIS FILE DIRECTLY.
-# PLEASE ONLY EDIT dirty.txt THEN RUN THE remove_duplicates.py SCRIPT
-# This file will be re-written and sorted by the script.
+# THIS FILE IS READ ONLY, DO NOT TRY TO MODIFY THIS FILE DIRECTLY.
+# PLEASE SEE THE REPO README.MD FOR INSTRUCTIONS ON UPDATING THIS FILE.
 # ===============================================================
 
 0.0.0.0 7news.com.au

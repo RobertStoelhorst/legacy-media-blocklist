@@ -1,3 +1,33 @@
+import os
+
+
+def overwrite_blocklist(sanitised_file, blocklist_file):
+    header = """# Title: Legacy Media Propaganda Blocklist
+#
+# This blocklist is for all western aired Mainstream Mass (Legacy) Media outlets
+# Date: 17 February 2025
+# Number of unique domains:
+#
+# Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/all.txt
+# Project home page: https://github.com/RobertStoelhorst/legacy-media-blocklist
+# ===============================================================
+# THIS FILE IS READ ONLY, DO NOT TRY TO MODIFY THIS FILE DIRECTLY.
+# PLEASE SEE THE REPO README.MD FOR INSTRUCTIONS ON UPDATING THIS FILE.
+# ===============================================================\n\n"""
+
+    if os.path.exists(blocklist_file):
+        os.chmod(blocklist_file, 0o644)
+
+    with open(sanitised_file, 'r', encoding='utf-8') as sfile:
+        lines = sorted(sfile.readlines())
+
+    with open(blocklist_file, 'w', encoding='utf-8') as bfile:
+        bfile.write(header)
+        bfile.writelines(lines)
+
+    os.chmod(blocklist_file, 0o444)
+
+
 def remove_duplicate_lines(input_file, output_file, duplicates_file):
     seen = set()
     duplicates = set()
@@ -14,29 +44,6 @@ def remove_duplicate_lines(input_file, output_file, duplicates_file):
 
         for dup in duplicates:
             dupfile.write(dup)
-
-
-def overwrite_blocklist(sanitised_file, blocklist_file):
-    header = """# Title: Legacy Media Propaganda Blocklist
-#
-# This blocklist is for all western aired Mainstream Mass (Legacy) Media outlets
-# Date: 17 February 2025
-# Number of unique domains:
-#
-# Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/all.txt
-# Project home page: https://github.com/RobertStoelhorst/legacy-media-blocklist
-# ===============================================================
-# # WARNING !!!! DO NOT MODIFY THIS FILE DIRECTLY.
-# PLEASE ONLY EDIT dirty.txt THEN RUN THE remove_duplicates.py SCRIPT
-# This file will be re-written and sorted by the script.
-# ===============================================================\n\n"""
-
-    with open(sanitised_file, 'r', encoding='utf-8') as sfile:
-        lines = sorted(sfile.readlines())
-
-    with open(blocklist_file, 'w', encoding='utf-8') as bfile:
-        bfile.write(header)
-        bfile.writelines(lines)
 
 
 if __name__ == "__main__":
