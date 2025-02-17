@@ -1,33 +1,6 @@
 import os
 
 
-def overwrite_blocklist(sanitised_file, blocklist_file):
-    header = """# Title: Legacy Media Propaganda Blocklist
-#
-# This blocklist is for all western aired Mainstream Mass (Legacy) Media outlets
-# Date: 17 February 2025
-# Number of unique domains:
-#
-# Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/all.txt
-# Project home page: https://github.com/RobertStoelhorst/legacy-media-blocklist
-# ===============================================================
-# THIS FILE IS READ ONLY, DO NOT TRY TO MODIFY THIS FILE DIRECTLY.
-# PLEASE SEE THE REPO README.MD FOR INSTRUCTIONS ON UPDATING THIS FILE.
-# ===============================================================\n\n"""
-
-    if os.path.exists(blocklist_file):
-        os.chmod(blocklist_file, 0o644)
-
-    with open(sanitised_file, 'r', encoding='utf-8') as sfile:
-        lines = sorted(sfile.readlines())
-
-    with open(blocklist_file, 'w', encoding='utf-8') as bfile:
-        bfile.write(header)
-        bfile.writelines(lines)
-
-    os.chmod(blocklist_file, 0o444)
-
-
 def remove_duplicate_lines(input_file, output_file, duplicates_file):
     seen = set()
     duplicates = set()
@@ -46,10 +19,41 @@ def remove_duplicate_lines(input_file, output_file, duplicates_file):
             dupfile.write(dup)
 
 
+def overwrite_blocklist(sanitised_file, blocklist_file):
+    with open(sanitised_file, 'r', encoding='utf-8') as sfile:
+        lines = sorted(sfile.readlines())
+
+    unique_domain_count = len(lines)
+
+    header = f"""# Title: Legacy Media Propaganda Blocklist
+#
+# This blocklist is for all western aired Mainstream Mass (Legacy) Media outlets
+# Date: 17 February 2025
+# Number of unique domains: {unique_domain_count}
+#
+# Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/all.txt
+# Project home page: https://github.com/RobertStoelhorst/legacy-media-blocklist
+# ===============================================================
+# THIS FILE IS READ ONLY, DO NOT TRY TO MODIFY THIS FILE DIRECTLY.
+# PLEASE SEE THE REPO README.MD FOR INSTRUCTIONS ON UPDATING THIS FILE.
+# ===============================================================\n\n"""
+
+    # Temporarily make the file writable if it exists
+    if os.path.exists(blocklist_file):
+        os.chmod(blocklist_file, 0o644)
+
+    with open(blocklist_file, 'w', encoding='utf-8') as bfile:
+        bfile.write(header)
+        bfile.writelines(lines)
+
+    # Set file back to read-only
+    os.chmod(blocklist_file, 0o444)
+
+
 if __name__ == "__main__":
     input_filename = "dirty.txt"
-    output_filename = "parser/sanitised.txt"
-    duplicates_filename = "parser/duplicates.txt"
+    output_filename = "sanitised.txt"
+    duplicates_filename = "duplicates.txt"
     blocklist_filename = "Lists/blocklist.txt"
 
     remove_duplicate_lines(
@@ -59,4 +63,4 @@ if __name__ == "__main__":
 
     overwrite_blocklist(output_filename, blocklist_filename)
     print(
-        f"Sanitised list saved to {blocklist_filename} with header and sorted order.")
+        f"Sanitised list saved to {blocklist_filename} with header, sorted order, and domain count.")

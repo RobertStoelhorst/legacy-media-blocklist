@@ -2,7 +2,7 @@
 #
 # This blocklist is for all western aired Mainstream Mass (Legacy) Media outlets
 # Date: 17 February 2025
-# Number of unique domains:
+# Number of unique domains: 316
 #
 # Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/all.txt
 # Project home page: https://github.com/RobertStoelhorst/legacy-media-blocklist
