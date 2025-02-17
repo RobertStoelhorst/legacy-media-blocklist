@@ -1,8 +1,9 @@
 # Title: Legacy Media Propaganda Blocklist
 #
 # This blocklist is for all western aired Mainstream Mass (Legacy) Media outlets
-# Date: 17 February 2025
-# Number of unique domains:
+# Created: 17 February 2025
+# Last updated: {todays_date}
+# Number of unique domains: {unique_domain_count}
 #
 # Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/all.txt
 # Project home page: https://github.com/RobertStoelhorst/legacy-media-blocklist

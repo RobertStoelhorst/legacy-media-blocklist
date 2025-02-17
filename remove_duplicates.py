@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 
 
 def remove_duplicate_lines(input_file, output_file, duplicates_file):
@@ -24,11 +25,13 @@ def overwrite_blocklist(sanitised_file, blocklist_file):
         lines = sorted(sfile.readlines())
 
     unique_domain_count = len(lines)
+    todays_date = datetime.today().strftime('%d %B %Y')
 
     header = f"""# Title: Legacy Media Propaganda Blocklist
 #
 # This blocklist is for all western aired Mainstream Mass (Legacy) Media outlets
-# Date: 17 February 2025
+# Created: 17 February 2025
+# Last updated: {todays_date}
 # Number of unique domains: {unique_domain_count}
 #
 # Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/all.txt
