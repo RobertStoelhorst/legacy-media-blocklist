@@ -2,6 +2,21 @@ import os
 from datetime import datetime
 
 
+def clean_line(line):
+    """Ensure each line starts with '0.0.0.0 ' and removes unwanted prefixes."""
+    line = line.strip()  # Remove leading/trailing whitespace
+    if line.startswith("0.0.0.0 "):
+        return line
+    elif line.startswith("https://www."):
+        line = line.replace("https://www.", "", 1)
+    elif line.startswith("https://"):
+        line = line.replace("https://", "", 1)
+    elif line.startswith("www."):
+        line = line.replace("www.", "", 1)
+
+    return f"0.0.0.0 {line}"
+
+
 def remove_duplicate_lines(input_file, output_file, duplicates_file):
     seen = set()
     duplicates = set()
@@ -10,14 +25,15 @@ def remove_duplicate_lines(input_file, output_file, duplicates_file):
             open(duplicates_file, 'w', encoding='utf-8') as dupfile:
 
         for line in infile:
-            if line in seen:
-                duplicates.add(line)
+            cleaned_line = clean_line(line)
+            if cleaned_line in seen:
+                duplicates.add(cleaned_line)
             else:
-                outfile.write(line)
-                seen.add(line)
+                outfile.write(cleaned_line + "\n")
+                seen.add(cleaned_line)
 
         for dup in duplicates:
-            dupfile.write(dup)
+            dupfile.write(dup + "\n")
 
 
 def overwrite_blocklist(sanitised_file, blocklist_file):
