@@ -34,7 +34,7 @@ def overwrite_blocklist(sanitised_file, blocklist_file):
 # Last updated: {todays_date}
 # Number of unique domains: {unique_domain_count}
 #
-# Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/all.txt
+# Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/blocklist.txt
 # Project home page: https://github.com/RobertStoelhorst/legacy-media-blocklist
 # ===============================================================
 # THIS FILE IS READ ONLY, DO NOT TRY TO MODIFY THIS FILE DIRECTLY.
