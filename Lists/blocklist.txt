@@ -5,7 +5,6 @@
 # Last updated: 17 February 2025
 # Number of unique domains: 317
 #
-# Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/blocklist.txt
 # Project home page: https://github.com/RobertStoelhorst/legacy-media-blocklist
 # ===============================================================
 # THIS FILE IS READ ONLY, DO NOT TRY TO MODIFY THIS FILE DIRECTLY.
