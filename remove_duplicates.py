@@ -55,8 +55,8 @@ def overwrite_blocklist(sanitised_file, blocklist_file):
 
 if __name__ == "__main__":
     input_filename = "dirty.txt"
-    output_filename = "sanitised.txt"
-    duplicates_filename = "duplicates.txt"
+    output_filename = "parser/sanitised.txt"
+    duplicates_filename = "parser/duplicates.txt"
     blocklist_filename = "Lists/blocklist.txt"
 
     remove_duplicate_lines(
