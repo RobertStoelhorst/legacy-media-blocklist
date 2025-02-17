@@ -3,7 +3,7 @@
 # This blocklist is for all western aired Mainstream Mass (Legacy) Media outlets
 # Created: 17 February 2025
 # Last updated: 18 February 2025
-# Number of unique domains: 317
+# Number of unique domains: 318
 #
 # Fetch the latest version of this file: https://raw.githubusercontent.com/RobertStoelhorst/legacy-media-blocklist/refs/heads/main/Lists/blocklist.txt
 # Project home page: https://github.com/RobertStoelhorst/legacy-media-blocklist
@@ -12,6 +12,7 @@
 # PLEASE SEE THE REPO README.MD FOR INSTRUCTIONS ON UPDATING THIS FILE.
 # ===============================================================
 
+0.0.0.0 *cnn.com
 0.0.0.0 7news.com.au
 0.0.0.0 abc.com
 0.0.0.0 abc.net.au
